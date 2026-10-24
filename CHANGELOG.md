@@ -47,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - JIT `registerOutput` dropped outputs independent of the inputs, shifting the others
 - `fmod`'s derivative to the divisor used `floor`, not `trunc`: off by one for negative quotients
 - Moving an active tape terminated the program
+- The JIT interpreter threw on the `Fmod` opcode
 - `fmod`, `remainder` and `remquo` derivatives to the divisor: wrong for large quotients, where `a / b` rounds to an integer, and where the result is NaN
 - `ldexp` and `frexp` derivatives were wrong for negative exponents and exponents past 30
 - `scalbn` overflowed or underflowed where the result is finite
